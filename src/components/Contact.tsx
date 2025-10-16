@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -38,14 +37,32 @@ const Contact: React.FC = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    // Here you would normally send the form data to your backend
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const response = await fetch("https://formspree.io/f/mdkwbegz", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for your message. I'll get back to you soon.",
+        });
+        form.reset();
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    }
   }
 
   return (
@@ -70,7 +87,7 @@ const Contact: React.FC = () => {
                   <p className="text-portfolio-muted">kaluifechukwu7@gmail.com</p>
                 </div>
               </div>
-              {/* <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4">
                 <div className="contact-icon">
                   <Phone className="h-6 w-6" />
                 </div>
@@ -78,14 +95,14 @@ const Contact: React.FC = () => {
                   <h4 className="font-semibold text-portfolio-blue">Phone</h4>
                   <p className="text-portfolio-muted">+1234567890</p>
                 </div>
-              </div> */}
+              </div>
               <div className="flex items-start gap-4">
                 <div className="contact-icon">
                   <MapPin className="h-6 w-6" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-portfolio-blue">Location</h4>
-                  <p className="text-portfolio-muted">Lagos, Nigeria</p>
+                  <p className="text-portfolio-muted">City, Country</p>
                 </div>
               </div>
               <div className="pt-6">
@@ -108,7 +125,7 @@ const Contact: React.FC = () => {
                     <Linkedin className="h-6 w-6" />
                   </a>
                   <a 
-                    href="mailto:contact@example.com" 
+                    href="mailto:kaluifechukwu7@gmail.com" 
                     className="contact-icon"
                   >
                     <Mail className="h-6 w-6" />
