@@ -87,7 +87,7 @@ const Contact: React.FC = () => {
                   <p className="text-portfolio-muted">kaluifechukwu7@gmail.com</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
+              {/* <div className="flex items-start gap-4">
                 <div className="contact-icon">
                   <Phone className="h-6 w-6" />
                 </div>
@@ -95,14 +95,14 @@ const Contact: React.FC = () => {
                   <h4 className="font-semibold text-portfolio-blue">Phone</h4>
                   <p className="text-portfolio-muted">+1234567890</p>
                 </div>
-              </div>
+              </div> */}
               <div className="flex items-start gap-4">
                 <div className="contact-icon">
                   <MapPin className="h-6 w-6" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-portfolio-blue">Location</h4>
-                  <p className="text-portfolio-muted">City, Country</p>
+                  <p className="text-portfolio-muted">Lagos, Nigeria</p>
                 </div>
               </div>
               <div className="pt-6">
