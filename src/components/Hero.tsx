@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
             <ScrollFade delay={0.2}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-portfolio-blue mb-4">
                 Hi, I'm <TypedText 
-                  texts={["Ifechukwu", "a Developer", "a Problem Solver"]} 
+                  texts={["Kalu Ifechukwu", "a Developer", "a Problem Solver"]} 
                   typingSpeed={100}
                   className="text-portfolio-accent"
                 />
