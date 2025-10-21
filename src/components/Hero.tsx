@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
             
             <ScrollFade delay={0.4}>
               <h2 className="text-2xl md:text-3xl font-medium text-portfolio-dark-blue mb-6">
-                MERN Stack Developer & Python Enthusiast
+                MERN Stack Developer & AI/ML Enthusiast
               </h2>
             </ScrollFade>
             
@@ -75,19 +75,26 @@ const Hero: React.FC = () => {
             </ScrollFade>
           </div>
           
-          <ScrollFade direction="left" delay={0.5} className="lg:col-span-2 flex justify-center lg:justify-end">
-            <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-portfolio-accent/20 overflow-hidden flex items-center justify-center">
-                <div className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-portfolio-accent">
-                  KI
-                </div>
-              </div>
-              <div className="absolute -bottom-4 -right-4 bg-white rounded-lg shadow-lg p-4 w-32">
-                <div className="text-portfolio-blue font-medium">Python</div>
-                <div className="text-portfolio-accent font-medium">MERN Stack</div>
-              </div>
-            </div>
-          </ScrollFade>
+          <ScrollFade
+  direction="left"
+  delay={0.5}
+  className="lg:col-span-2 flex justify-center lg:justify-end"
+>
+  <div className="relative">
+    <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden flex items-center justify-center shadow-lg">
+      <img
+        src="/src/components/hood.jpg"
+        alt="Your Profile"
+        className="w-full h-full object-cover"
+      />
+    </div>
+    <div className="absolute -bottom-4 -right-4 bg-white rounded-lg shadow-lg p-4 w-32">
+      <div className="text-portfolio-blue font-medium">AI/ML</div>
+      <div className="text-portfolio-accent font-medium">MERN Stack</div>
+    </div>
+  </div>
+</ScrollFade>
+
         </div>
       </div>
     </section>
