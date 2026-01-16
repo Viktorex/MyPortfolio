@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
             
             <ScrollFade delay={0.6}>
               <p className="text-lg text-portfolio-muted mb-8 max-w-2xl">
-                I’m passionate about turning ideas into interactive web experiences using the MERN stack and exploring Python to bring AI-powered features to life.
+                Backend-focused MERN developer skilled in building APIs and server-side logic, with solid experience in React for responsive frontend interfaces and Python for AI/ML exploration.
               </p>
             </ScrollFade>
             
