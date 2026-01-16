@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
             
             <ScrollFade delay={0.4}>
               <h2 className="text-2xl md:text-3xl font-medium text-portfolio-dark-blue mb-6">
-                MERN Stack Developer & AI/ML Enthusiast
+                MERN Backend Developer & AI/ML Enthusiast
               </h2>
             </ScrollFade>
             
